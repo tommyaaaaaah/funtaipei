@@ -1,0 +1,188 @@
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; /*width:510px;*/}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling:touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background-color:rgba(0, 0, 0, 0.9);}
+        
+/*avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating)*/ 
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0; outline:none;}
+
+#cboxClose{
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	border: none;
+	position: absolute;
+	background: url(../svg/close.svg) no-repeat 0 0;
+	top: 50px;
+	right: 50px;
+}
+#cboxClose:hover{
+	transform: translate(0,5px);
+	-webkit-transform: translate(0,5px);
+	-moz-transform:translate(0,5px);
+}
+
+/*  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+
+
+
+/*-colorbox用-*/
+.inline_content{
+	width: 1000px;
+	overflow:hidden;
+	margin: 0 auto;
+	padding: 10vh 5vw;
+	background-color: #00afc3;
+}
+.inline_content a.logo{
+	display: block;
+	width: 400px;
+	height: auto;
+	margin: 0 auto;
+}
+.inline_content nav{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 10vh;
+}
+.inline_content nav li{
+	width: calc(100% / 3 - 20px);
+	overflow: hidden;
+	padding-right: 20px;
+	float: left;
+}
+.inline_content nav li a{
+	display: table;
+	margin-bottom: 5vh;
+	font-size: 1.3rem;
+	color: #fff;
+}
+.inline_content nav li a:hover{
+	color: #e95504;
+}
+.inline_content nav li.link p{
+	margin-bottom: 2vh;
+	font-size: 1.3rem;
+	color: #fff;
+}
+.inline_content nav li.link a{
+	margin-bottom: 2vh;
+	font-size: 1rem;
+}
+.inline_content nav li.link a i{
+	width: 15px;
+	float: left;
+}
+.inline_content nav li.link a span{
+	width: calc(100% - 15px);
+	float: right;
+}
+
+
+
+@media only screen and (max-width: 1024px){
+#cboxClose{
+	width: 50px;
+	height: 50px;
+	top: 7vh;
+	right: 7vw;
+}
+
+.inline_content{
+	width: 600px;
+	padding: 7vh 7vw;
+}
+.inline_content a.logo{
+	width: 70%;
+	max-width: 300px;
+	margin: 0;
+}
+.inline_content nav{
+	margin-top: 7vh;
+}
+.inline_content nav li{
+	width: 100%;
+	padding-right: 0;
+	float: none;
+}
+.inline_content nav li a.language{
+	display: block;
+	width: 120px;
+	height: 60px;
+	padding: 2vh 15px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #000;
+	background-image: url(../svg/bg_language.svg);
+	background-size: auto 100%;
+	float: left;
+}
+.inline_content nav li a.language.en-box{
+	margin-left: 30px;
+	padding-left: 23px;
+}
+.inline_content nav li a{
+	margin-bottom: 7vh;
+	font-size: 1.3rem;
+}
+.inline_content nav li.link p{
+	margin-bottom: 5vh;
+	font-size: 1.3rem;
+	color: #fff;
+}
+.inline_content nav li.link a{
+	margin-bottom: 2vh;
+	font-size: 1rem;
+}
+}/* max-width: 1024px */
+
+
+@media only screen and (max-width: 450px){
+.inline_content{
+	width: 300px;
+}
+.inline_content nav li a.language{
+	width: 100px;
+	height: 50px;
+	padding: 2.5vh 10px;
+	font-size: 1.3rem;
+}
+.inline_content nav li a.language.en-box{
+	margin-left: 20px;
+	padding-left: 17px;
+}
+}/* max-width: 1024px */
+
+

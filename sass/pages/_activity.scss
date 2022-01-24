@@ -1,0 +1,371 @@
+.activity{
+	.activity-btn{
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 10vh;
+		text-align: center;
+		a{
+			display: inline-block;
+			width: 40%;
+			max-width: 160px;
+			margin: 0 5px 0 5px;
+			filter: grayscale(1);
+			-webkit-filter: grayscale(1);
+			transition: all 0.5s;
+			img{
+				width: 100%;
+			}
+			&:hover, &.this{
+				filter: grayscale(0);
+				-webkit-filter: grayscale(0);
+				transition: all 0.5s;
+			}
+			&:hover{
+				animation-name: shake-rotate;
+				animation-duration: 100ms;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+			}
+		}
+	}
+/*-----------------activity-text-----------------*/
+	.activity-text{
+		width: 90%;
+		max-width: 1000px;
+		overflow: hidden;
+		margin: 0 auto 20vh;
+		padding: 10vh 5vw 5vh;
+		background-color: #000;
+		border: 1px #fff solid;
+		.html{
+			margin-bottom: 10vh;
+			font-size: 1.2rem;
+			color: #fff;
+		}
+		i.arrow-down{
+			display: block;
+			width: 30px;
+			height: 25px;
+			margin: 0 auto;
+			clear: both;
+			img{
+				animation-name: arrow-down;
+				animation-duration: 300ms;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+			}
+		}
+	}//activity-text
+/*-----------------itinerary-guides-----------------*/
+	.itinerary-guides{
+		margin-bottom: 20vh;
+		position: relative;
+		.itinerary-guides-decoration01{
+			width: 100%;
+			max-width: 480px;
+			margin: 0 auto 8vh;
+		}
+		.itinerary-guides-decoration02{
+			width: 100%;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+		.itinerary-guides-html{
+			width: 60%;
+			overflow: hidden;
+			margin: 0 auto 5vh;
+			padding: 5vh 5vw;
+			background-color: #fff;
+			border-radius: 15px;
+		}
+		img.itinerary-guides-decoration03, img.itinerary-guides-decoration04, img.itinerary-guides-decoration05{
+			position: absolute;
+			animation-name: cloud;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		img.itinerary-guides-decoration03{
+			width: 10%;
+			left: 0;
+			animation-name: cloud01;
+		}
+		@keyframes cloud01{
+			0%{
+				top: 190px;
+			}
+			50%{
+				top: 210px;
+			}
+			100%{
+				top: 190px;
+			}
+		}
+		img.itinerary-guides-decoration04{
+			width: 7%;
+			left: 50%;
+			animation-name: cloud02;
+		}
+		@keyframes cloud02{
+			0%{
+				top: 55px;
+			}
+			50%{
+				top: 75px;
+			}
+			100%{
+				top: 55px;
+			}
+		}
+		img.itinerary-guides-decoration05{
+			width: 10%;
+			right: 0;
+			animation-name: cloud03;
+		}
+		@keyframes cloud03{
+			0%{
+				top: 240px;
+			}
+			50%{
+				top: 260px;
+			}
+			100%{
+				top: 240px;
+			}
+		}
+		.itinerary-guides-link{
+			width: 160px;
+			margin: 0 auto;
+			a{
+				display: table;
+				margin-bottom: 15px;
+				padding: 10px 0 10px 50px;
+				font-size: 1.3rem;
+				font-weight: bold;
+				color: #000;
+				&:hover{
+					background-image: url(../svg/activity_decoration04.svg);
+					background-repeat: no-repeat;
+					background-size: auto 100%;
+				}
+			}
+			&.en{
+				width: 320px;
+			}
+		}
+	}//itinerary-guides
+/*-----------------album-of-attractions-----------------*/
+	.album-of-attractions{
+		margin-bottom: 20vh;
+		.left-box{
+			width: calc(100% - 200px);
+		}
+		.right-box{
+			width: 200px;
+		}
+		.bannershow{
+			overflow: hidden;
+			padding: 10vh 5vw;
+			background-color: #FFF;
+			border-radius: 15px;
+			p.title{
+				margin-bottom: 5vh;
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: #000;
+			}
+			img{
+				display: block;
+				width: 100%;
+			}
+			.showbox{
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+				border: 5px #000 solid;
+			}
+			.abgne{
+				width: 100%;
+				overflow: hidden;
+				margin-top: 30px;
+				a{
+					display: inline-block;
+					width: 20%;
+					overflow: hidden;
+					margin-right: 20px;
+					border: 5px #000 solid;
+					cursor: pointer;
+				}
+			}
+		}//bannershow
+	}//album-of-attractions
+/*-----------------level-strategies-----------------*/
+	.level-strategies{
+		.left-box{
+			width: 200px;
+		}
+		.right-box{
+			width: calc(100% - 200px);
+		}
+		.level-strategies-html{
+			overflow: hidden;
+			padding: 10vh 5vw;
+			background-color: #FFF;
+			border-radius: 15px;
+			p.title{
+				margin-bottom: 5vh;
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: #000;
+			}
+			.html.mobile a{
+				word-break: break-all;
+			}
+		}
+	}//level-strategies
+
+	.activity-link{
+		margin-top: 10vh;
+		text-align: right;
+		a{
+			display: inline-block;
+			margin-left: 20px;
+			img{
+				height: 60px;
+			}
+			&:hover{
+				transform: translate(0,5px);
+				-webkit-transform: translate(0,5px);
+				-moz-transform:translate(0,5px);
+			}
+		}
+	}//activity-link
+}//activity
+
+
+
+
+
+
+
+
+@media all and (max-width: 1024px) {
+.activity{
+	.activity-btn{
+		a{
+			margin-bottom: 20px;
+		}
+	}
+/*-----------------activity-text-----------------*/
+	.activity-text{
+		margin: 0 auto 10vh;
+		padding: 6vh 5vw 5vh;
+		.html{
+			margin-bottom: 5vh;
+			font-size: 1rem;
+		}
+		i.arrow-down{
+			width: 20px;
+		}
+	}//activity-text
+/*-----------------itinerary-guides-----------------*/
+	.itinerary-guides{
+		margin-bottom: 10vh;
+		.itinerary-guides-decoration01{
+			margin: 0 auto 5vh;
+		}
+		.itinerary-guides-html{
+			width: 100%;
+			margin: 0 auto 5vh;
+			padding: 6vh 5vw;
+			border-radius: 10px;
+		}
+		img.itinerary-guides-decoration03{
+			display: none;
+		}
+		img.itinerary-guides-decoration04{
+			width: 20%;
+			left: 45%;
+		}
+		@keyframes cloud02{
+			0%{
+				top: 25px;
+			}
+			50%{
+				top: 50px;
+			}
+			100%{
+				top: 25px;
+			}
+		}
+		img.itinerary-guides-decoration05{
+			display: none;
+		}
+		.itinerary-guides-link{
+			&.en{
+				width: 280px;
+				a{
+					font-size: 1rem;
+				}
+			}
+		}
+	}//itinerary-guides
+/*-----------------album-of-attractions-----------------*/
+	.album-of-attractions{
+		margin-bottom: 10vh;
+		.left-box{
+			width: 100%;
+		}
+		.right-box{
+			display: none;
+		}
+		.bannershow{
+			padding: 6vh 5vw;
+			border-radius: 10px;
+			p{
+				font-size: 1.5rem;
+			}
+			.showbox{
+				border: 3px #000 solid;
+			}
+			.abgne{
+				width: 100%;
+				overflow: hidden;
+				margin-top: 20px;
+				a{
+					width: 30%;
+					margin-bottom: 10px;
+					margin-right: 0;
+					border: 3px #000 solid;
+				}
+			}
+		}//bannershow
+	}//album-of-attractions
+/*-----------------level-strategies-----------------*/
+	.level-strategies{
+		.left-box{
+			display: none;
+		}
+		.right-box{
+			width: 100%;
+		}
+		.level-strategies-html{
+			padding: 6vh 5vw;
+			border-radius: 10px;
+			p{
+				font-size: 1.5rem;
+			}
+		}
+	}//level-strategies
+
+	.activity-link{
+		a{
+			margin-left: 0;
+			margin-bottom: 20px;
+			img{
+				height: 50px;
+			}
+		}
+	}//activity-link
+}//activity
+}//max-width: 1024px

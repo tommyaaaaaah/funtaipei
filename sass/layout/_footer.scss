@@ -1,0 +1,36 @@
+footer{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 5vh 0 10vh;
+	border-top: 2px #000 solid;
+	p{
+		font-size: 1rem;
+		font-weight: bold;
+		color: #000;
+		line-height: 2;
+		&.title{
+			font-size: 1.2rem;
+		}
+	}
+}//footer
+
+
+@media all and (max-width: 1024px) {
+footer{
+	p{
+		margin-bottom: 20px;
+		font-size: 1rem;
+		text-align: center;
+		line-height: 1.5;
+		&.title{
+			font-size: 1.4rem;
+		}
+	}
+	a{
+		color: #000;
+	}
+}//footer
+}//max-width: 1024px
+
+
